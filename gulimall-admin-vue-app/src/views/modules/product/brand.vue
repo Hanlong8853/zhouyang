@@ -29,7 +29,12 @@
       <el-table-column type="selection" header-align="center" align="center" width="50"></el-table-column>
       <el-table-column prop="brandId" header-align="center" align="center" label="品牌id"></el-table-column>
       <el-table-column prop="name" header-align="center" align="center" label="品牌名"></el-table-column>
-      <el-table-column prop="logo" header-align="center" align="center" label="品牌logo地址"></el-table-column>
+      <el-table-column prop="logo" header-align="center" align="center" label="品牌logo地址">
+         <template slot-scope="scope">
+          <img style="width: 100px; height: 100px" ::src="scope.row.logo">
+        </template>
+      </el-table-column>
+       
       <el-table-column prop="descript" header-align="center" align="center" label="价格"></el-table-column>
       <el-table-column prop="showStatus" header-align="center" align="center" label="显示状态">
         <template slot-scope="scope">
